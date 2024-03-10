@@ -2,20 +2,27 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer className="bg-light text-dark py-4">
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-6">
-                        <h5>CharityHub</h5>
-                        <p>A platform for making a difference.</p>
+        <footer className="bg-black-500 text-white p-6 mt-auto absolute bottom-0 w-full border-t border-gray-500">
+            <div className="container mx-auto">
+                <div className="flex flex-col md:flex-row justify-between pb-6">
+                    <div className="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                        <div>
+                            <h2 className="text-lg font-semibold mb-2">About Company</h2>
+                            <p className="text-left">Connecting helpers, organizations, and donors. Built with passion in MERN during a hackathon, fostering collaboration for a positive impact. Join our journey of compassion and community.</p>
+                        </div>
                     </div>
-                    <div className="col-md-6">
-                        <h5>Contact Us</h5>
-                        <ul className="list-unstyled">
-                            <li>Email: info@charityhub.com</li>
-                            <li>Phone: +1 123 456 7890</li>
-                            <li>Address: 123 Main St, City, Country</li>
-                        </ul>
+                    <div className="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                        <div>
+                            <h2 className="text-lg font-semibold mb-2">Contact Information</h2>
+                            <p className="text-left">Email: contact@example.com</p>
+                            <p className="text-left">Phone: +1 123-456-7890</p>
+                            <p className="text-left">Address: Your Company Address</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex justify-center border-t border-gray-500">
+                    <div className="w-full">
+                        <p className="mt-3 text-center">&copy; 2024 Your Company. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
