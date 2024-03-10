@@ -42,7 +42,7 @@ const postSchema = new mongoose.Schema(
             {
                 donor: {
                     type: mongoose.Schema.Types.ObjectId,
-                    ref: 'Donor',
+                    ref: 'User',
                     required: true,
                 },
                 amount: {
