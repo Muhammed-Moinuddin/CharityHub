@@ -15,8 +15,13 @@ const postSchema = new mongoose.Schema(
             type: String,
             required: true,
         },
-        cause: {
-            type: String,
+        // cause: {
+        //     type: String,
+        //     required: true,
+        // },
+        causeCategory: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'CauseCategory',
             required: true,
         },
         donationRequired: {
@@ -31,7 +36,7 @@ const postSchema = new mongoose.Schema(
         },
         verifiedByOrganization: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'Organization',
+            ref: 'User',
         },
         donors: [
             {
