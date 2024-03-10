@@ -1,3 +1,5 @@
+// import mongoose from "mongoose";
+
 function checkAdminRole(req, res, next) {
   // Check if user role is admin
   if (req.user && req.user.roles.includes("admin")) {

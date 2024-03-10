@@ -2,6 +2,8 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import * as dotenv from "dotenv";
+import { apiRouter } from "./routes/api/apiRoutes.js";
+import { userRouter } from "./routes/user/userRoutes.js";
 
 dotenv.config();
 const app = express() 
@@ -12,27 +14,8 @@ app.use(cors());
 //   res.send('Hello World!')
 // })
 
-// // This is the endpoint that the frontend is calling for the popular causes. fill it with a dictionary that has an array of causes. cause1, cause2, etc..
-// app.get('/api/popular-causes', (req, res) => {
-//   // res.header("Access-Control-Allow-Origin", "*");
-//   res.send({
-//     "causes": [
-//       {
-//         "id": 1,
-//         "name": "Cause 1"
-//       },
-//       {
-//         "id": 2,
-//         "name": "Cause 2"
-//       },
-//       {
-//         "id": 3,
-//         "name": "Cause 3"
-//       }
-//     ]
-//   })
-// })
-
+app.use("/", apiRouter);
+app.use("/", userRouter);
 
 //To connect to mongoDB
 mongoose.connect(process.env.MONGODB_URI, {
