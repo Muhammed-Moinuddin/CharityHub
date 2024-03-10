@@ -13,14 +13,13 @@ export default function PopularCauses(props) {
 
   function getPopularCauses() {
     let apiUrl = import.meta.env.VITE_BACKEND_URL + `api/popular-causes`;
-    console.log("apiUrl:" + apiUrl);
     axios.get(apiUrl).then(handleResponse);
   }
 
   if (popularCausesData.ready) {
-    console.log(popularCausesData);
     return (
       <div className="popular-cases">
+        <h6>Popular Causes</h6>
         <CauseCard data={popularCausesData.data} />
       </div>
     );
