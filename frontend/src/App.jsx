@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import './App.css'
 import PopularCauses from './components/PopularCauses';
 import Header from './components/Header';
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
           <div className="col-12">hi</div>
           <PopularCauses />
         </div>
+        <Footer />
       </div>
     </div>
   );
